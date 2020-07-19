@@ -40,8 +40,8 @@ about_content: | # this will include new lines to allow paragraphs
 # More Section
 # more_title: A Little More About Me
 more_content: | # this will include new lines to allow paragraphs
- Apart from love with development, travelling and binge-watching, I like :
-  - A big DC fan
+ Apart from love with development, travelling and binge-watching, I :
+  - Am a big DC fan
   - Love to play TT,Pool,Badminton
   - Crave for CS:GO
 
