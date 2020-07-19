@@ -55,3 +55,4 @@ plugins:
   - jekyll-seo-tag
 
 darkmode: true
+theme: jekyll-theme-slate
