@@ -12,7 +12,7 @@
 - layout: left
   name: ECC encryption
   #link: https://github.com/rishi-lgtm/-IOT_ECC_Encryption
-  github: /rishi-lgtm/-IOT_ECC_Encryption
+  github: rishi-lgtm/-IOT_ECC_Encryption
   quote: >
     Elliptic curve cryptography
   description: | # this will include new lines to allow paragraphs
