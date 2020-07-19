@@ -1,8 +1,20 @@
 - layout: left
-  company:
-  link:
-  job_title:
-  dates:
+  company: Flipkart Internet Pvt. Limited
+  #link:
+  job_title: SDE-I
+  dates: July 2019 - Present
   quote: >
+    True Starting of corporate Journey
   description: | # this will include new lines to allow paragraphs
-    <mark>WIP</mark>
+    My team won at the conpetition organised at Flipkart JEDI bootcamp.
+
+
+- layout: left
+  company: Nucleus Softwares
+  #link:
+  job_title: Project Intern
+  dates: May 2018 - Jul 2018
+  quote: >
+    Voice Bot
+  description: | # this will include new lines to allow paragraphs
+    Worked on ML based <mark>Voice Bot</mark> which is a chatbot capable to tranverse in multiple languages with context memory.

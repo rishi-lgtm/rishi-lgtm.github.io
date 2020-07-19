@@ -24,7 +24,9 @@ linkedin_username: rishi-gupta-554295113
 # about_title: About Me
 about_profile_image: images/rishi.jpg
 about_content: | # this will include new lines to allow paragraphs
- <mark>WIP</mark>
+ Experienced Software Engineer with a demonstrated history of working in the internet industry. Skilled in Java, OS,Backend Development and worked on distributed data stores. Strong engineering professional with a Bachelor of Technology - BTech focused in Computer Engineering from National Institute of Technology Kurukshetra.
+
+
 
 # Projects Section
 # projects_title: Projects
@@ -38,7 +40,10 @@ about_content: | # this will include new lines to allow paragraphs
 # More Section
 # more_title: A Little More About Me
 more_content: | # this will include new lines to allow paragraphs
-  <mark>WIP</mark>
+ A big DC fan.
+ Loves Table Tennis, Pool, Badminton.
+ Always ready for CS:GO
+ Fav book : Thinking fast and slow
 
 
 # Footer

@@ -1,7 +1,17 @@
 - layout: left
-  name:
-  dates:
-  qualification:
+  name: NIT Kurukshetra
+  dates: 2015 - 2019
+  qualification: Bachelors of Technology (Computer Science Engineering)
   quote: >
+    9.3 CGPA
   description: | # this will include new lines to allow paragraphs
-    <mark>WIP</mark>
+
+
+- layout: left
+  name: Delhi Public School
+  dates: 2015
+  qualification: Secondary Education
+  quote: >
+    95.6 %
+  description: | # this will include new lines to allow paragraphs
+

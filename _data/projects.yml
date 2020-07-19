@@ -1,7 +1,21 @@
-- layout:
-  name:
-  link:
-  github:
+- layout: left
+  name: Voice Bot
+  #link:
+  #github:
   quote: >
+    ML based Chatbot
   description: | # this will include new lines to allow paragraphs
-    <mark>WIP</mark>
+    Voice bot was based RASA (ML library) which was trained on datasets consisting various languages. It helped in providing multilingual capability to the bot.
+    It also memory of the context regarding to the chat for limited conversation.
+
+
+- layout: left
+  name: ECC encryption
+  #link: https://github.com/rishi-lgtm/-IOT_ECC_Encryption
+  github: https://github.com/rishi-lgtm/-IOT_ECC_Encryption
+  quote: >
+    Elliptic curve cryptography
+  description: | # this will include new lines to allow paragraphs
+    The project was used to generate OTPs with help of combining Lamport and ECC algorithms. This algorithm can possibly avoid MIMs,eavesdropping and DOS attacks.
+
+
