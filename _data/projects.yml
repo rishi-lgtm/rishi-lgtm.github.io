@@ -6,7 +6,7 @@
     ML based Chatbot
   description: | # this will include new lines to allow paragraphs
     Voice bot was based RASA (ML library) which was trained on datasets consisting various languages. It helped in providing multilingual capability to the bot.
-    It also memory of the context regarding to the chat for limited conversation.
+    It also has memory of the context for limited conversation.
 
 
 - layout: left
