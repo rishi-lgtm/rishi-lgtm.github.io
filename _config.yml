@@ -41,10 +41,8 @@ about_content: | # this will include new lines to allow paragraphs
 # more_title: A Little More About Me
 more_content: | # this will include new lines to allow paragraphs
  A big DC fan.
- Loves Table Tennis, Pool, Badminton.
- Always ready for CS:GO
- and all time fav Thinking fast and slow
-
+ Love Table Tennis, Pool, Badminton.
+ Crave for CS:GO
 
 # Footer
 footer_show_references: true
