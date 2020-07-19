@@ -1,23 +1,23 @@
 # Site
-repository: sproogen/resume-theme
+repository: rishi-lgtm/rishi-lgtm.github.io
 favicon: images/favicon.ico
 
 # Personal info
-name: Brett Harris
-title: Senior Network System Administrator
-email: brett.h@email.co.uk
-website: www.github.com/sproogen/resume-theme
+name: Rishi Gupta
+title: Software Development Engineer
+email: guptarish123455@gmail.com
+#website: www.github.com/rishi-lgtm
 
 # Social links
-twitter_username: facespics
-github_username:  sproogen
+#twitter_username: facespics
+github_username:  rishi-lgtm
 # dribbble_username: jekyll
 # facebook_username: jekyll
 # flickr_username: jekyll
-instagram_username: chillwildlife
-linkedin_username: jameswgrant
+instagram_username: rishi.gupt.a
+linkedin_username: rishi-gupta-554295113
 # pinterest_username: jekyll
-youtube_username: globalmtb
+#youtube_username: globalmtb
 # googleplus_username: +jekyll
 
 # About Section
@@ -50,7 +50,7 @@ more_content: | # this will include new lines to allow paragraphs
 footer_show_references: true
 
 # Build settings
-remote_theme: sproogen/resume-theme
+remote_theme: rishi-lgtm/resume-theme
 
 sass:
   sass_dir: _sass
