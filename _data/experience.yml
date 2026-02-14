@@ -1,20 +1,42 @@
 - layout: left
-  company: Flipkart Internet Pvt. Limited
-  #link:
-  job_title: SDE-I
-  dates: July 2019 - Present
+  company: Uber
+  job_title: Senior Software Engineer (L5)
+  dates: Mar 2024 - Present
   quote: >
-    True Starting of corporate Journey
-  description: | # this will include new lines to allow paragraphs
-    My team won the competition organised at Flipkart JEDI bootcamp.
-
+    Bangalore, India
+  description: |
+    - **Market Efficiency (Blast Dispatch):** Boosted completed trip volume by **1.5x** and reduced cancellation rates by **10%** in high-density Taxi markets by engineering a "Blast Dispatch" mechanism that broadcasts multiple driver bids simultaneously.
+    - **Financial Reliability (uCommerce Migration):** Reduced order finalization failures by **28%** by leading migration of settlement logic from legacy infrastructure to the uCommerce model, ensuring accurate financial reconciliation for riders, drivers, and the platform.
+    - **Marketplace Metrics (NRT):** Enabled data-driven marketplace decisions by collaborating with engineers to launch near real-time metrics at the geospatial hex level for consumer applications.
+    - **Developer Productivity (Debug Monitor):** Reduced debugging latency from ~20 minutes to ~2 seconds by mentoring interns to architect a "Debug Monitor" tool that visualizes trip lifecycle events chronologically.
 
 - layout: left
-  company: Nucleus Softwares
-  #link:
+  company: Uber
+  job_title: Software Engineer II (L4)
+  dates: Dec 2021 - Mar 2024
+  quote: >
+    Bangalore, India
+  description: |
+    - **Partner Integration Scaling:** Increased completed trips by **10%** by re-architecting third-party partner integrations to support multi-destination routing and real-time trip editing, enabling riders to dynamically modify active itineraries.
+    - **Observability & Resilience:** Enhanced reliability by implementing alerting and monitoring dashboards (Grafana/M3), reducing Mean Time To Detect (MTTD) for critical production incidents by **40%**.
+    - **Performance Optimization:** Optimized high-throughput downstream service calls, reducing P99 latency by **150ms** and improving overall throughput during peak traffic.
+
+- layout: left
+  company: Flipkart
+  job_title: SDE-I
+  dates: Jul 2019 - Dec 2021
+  quote: >
+    Bangalore, India
+  description: |
+    - **Kubernetes & Infrastructure:** Accelerated deployment cycles by establishing a stable pre-prod environment using Kubernetes clusters and containerized microservices, eliminating dependency on legacy pre-prod boxes.
+    - **Anomaly Detection System:** Designed a blocking mechanism in data pipelines to detect anomalous entities, preventing business revenue loss for **100,000+** products.
+    - **Real-time Data Processing:** Engineered real-time file processing pipelines with Apache Storm topologies, enabling continuous computation with only a 1-minute overhead.
+
+- layout: left
+  company: Nucleus Software
   job_title: Project Intern
   dates: May 2018 - Jul 2018
   quote: >
-    Voice Bot
-  description: | # this will include new lines to allow paragraphs
-    Worked on ML based <mark>Voice Bot</mark> which is a chatbot capable to tranverse in multiple languages with context memory.
+    Noida, India
+  description: |
+    - **VoiceBot Development:** Developed a multilingual Voice Bot using RASA with context memory to maintain conversation flow.
