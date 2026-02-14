@@ -4,13 +4,13 @@ favicon: images/favicon.ico
 
 # Personal info
 name: Rishi Gupta
-title: Software Development Engineer
+title: Senior Software Engineer
 email: guptarish123455@gmail.com
 #website :
 
 # Social links
 #twitter_username: facespics
-github_username:  rishi-lgtm
+github_username: rishi-lgtm
 # dribbble_username: jekyll
 # facebook_username: jekyll
 # flickr_username: jekyll
@@ -24,9 +24,9 @@ linkedin_username: rishi-gupta-554295113
 # about_title: About Me
 about_profile_image: images/rishi.jpg
 about_content: | # this will include new lines to allow paragraphs
- Experienced Software Engineer with a demonstrated history of working in the internet industry. Skilled in Java, OS,Backend Development and worked on distributed data stores. Strong engineering professional with a Bachelor of Technology - BTech focused in Computer Engineering from National Institute of Technology Kurukshetra.
+  Senior Software Engineer at Uber with experience building high-scale marketplace and financial systems. I specialize in distributed systems, microservices, and event-driven architecture, with strong expertise in Java and backend platform engineering.
 
-
+  I enjoy solving reliability and performance problems in production systems and building internal tools that improve developer productivity.
 
 # Projects Section
 # projects_title: Projects
@@ -38,12 +38,12 @@ about_content: | # this will include new lines to allow paragraphs
 # educaton_title: Education
 
 # More Section
-# more_title: A Little More About Me
+more_title: Technical Skills
 more_content: | # this will include new lines to allow paragraphs
- Apart from love with development, travelling and binge-watching, I :
-  - Am a big DC fan
-  - Love to play TT,Pool,Badminton
-  - Crave for CS:GO
+  - **Mobile:** +91-8433496312
+  - **Languages:** Java, Python, C++, Go, SQL
+  - **Technologies:** MySQL, Cassandra, ElasticSearch, Kafka, Apache Flink, Kubernetes, Docker, Grafana
+  - **Core Concepts:** System Design (HLD/LLD), Microservices, Distributed Systems, Event-Driven Architecture
 
 # Footer
 footer_show_references: true
