@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rishi Gupta | Resume</title>
+    <style>
+      :root {
+        --bg: #f5f5f7;
+        --surface: rgba(255, 255, 255, 0.86);
+        --text: #1d1d1f;
+        --muted: #6e6e73;
+        --line: #d2d2d7;
+        --accent: #0071e3;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+        color: var(--text);
+        background: radial-gradient(circle at top right, #ffffff 0%, var(--bg) 60%);
+      }
+      .wrapper { max-width: 980px; margin: 0 auto; padding: 36px 20px 48px; }
+      .hero {
+        text-align: center;
+        padding: 56px 20px 36px;
+      }
+      .hero h1 {
+        margin: 0;
+        font-size: clamp(2.3rem, 6vw, 4rem);
+        letter-spacing: -0.03em;
+        font-weight: 700;
+      }
+      .hero p {
+        margin: 10px auto 0;
+        max-width: 700px;
+        color: var(--muted);
+        font-size: clamp(1rem, 2.4vw, 1.28rem);
+      }
+      .contacts {
+        margin-top: 18px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+      .contacts a { color: var(--accent); text-decoration: none; }
+
+      .grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(12, 1fr);
+      }
+      .card {
+        grid-column: span 12;
+        background: var(--surface);
+        border: 1px solid rgba(210, 210, 215, 0.8);
+        border-radius: 22px;
+        backdrop-filter: saturate(180%) blur(16px);
+        -webkit-backdrop-filter: saturate(180%) blur(16px);
+        padding: 26px;
+      }
+      .card h2 {
+        margin: 0 0 14px;
+        font-size: 1.05rem;
+        letter-spacing: 0.02em;
+        color: var(--muted);
+        text-transform: uppercase;
+      }
+      .exp-item { padding: 10px 0; border-bottom: 1px solid #ececef; }
+      .exp-item:last-child { border-bottom: 0; }
+      .head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+      .head strong { font-size: 1.02rem; }
+      .meta { color: var(--muted); font-size: 0.92rem; }
+      ul { margin: 8px 0 0 18px; padding: 0; }
+      li { margin-bottom: 6px; color: #333336; }
+      .two-col { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+      .pill {
+        display: inline-block;
+        margin: 4px 8px 0 0;
+        background: #fff;
+        border: 1px solid #e5e5ea;
+        border-radius: 999px;
+        padding: 6px 11px;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 760px) {
+        .wrapper { padding: 20px 14px 28px; }
+        .hero { padding-top: 28px; }
+        .two-col { grid-template-columns: 1fr; }
+        .card { border-radius: 16px; padding: 18px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <section class="hero">
+        <h1>Rishi Gupta</h1>
+        <p>Senior Software Engineer building reliable, high-scale marketplace and financial systems.</p>
+        <div class="contacts">
+          guptarish123455@gmail.com · +91-8433496312 ·
+          <a href="https://github.com/rishi-lgtm">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/rishi-gupta-554295113">LinkedIn</a>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Experience</h2>
+          <div class="exp-item">
+            <div class="head">
+              <strong>Uber — Senior Software Engineer (L5)</strong>
+              <span class="meta">Mar 2024 - Present · Bangalore, India</span>
+            </div>
+            <ul>
+              <li>Boosted completed trip volume by 1.5x and reduced cancellation rates by 10% through Blast Dispatch.</li>
+              <li>Reduced order finalization failures by 28% by leading settlement migration to uCommerce.</li>
+              <li>Launched near real-time geospatial marketplace metrics for consumer applications.</li>
+              <li>Built a debug tool with interns that cut investigation time from ~20 minutes to ~2 seconds.</li>
+            </ul>
+          </div>
+          <div class="exp-item">
+            <div class="head">
+              <strong>Uber — Software Engineer II (L4)</strong>
+              <span class="meta">Dec 2021 - Mar 2024 · Bangalore, India</span>
+            </div>
+            <ul>
+              <li>Increased completed trips by 10% through scalable partner integrations and real-time trip editing.</li>
+              <li>Improved incident detection by 40% with observability dashboards and alerting.</li>
+              <li>Reduced P99 latency by 150ms by optimizing high-throughput downstream service calls.</li>
+            </ul>
+          </div>
+          <div class="exp-item">
+            <div class="head">
+              <strong>Flipkart — SDE-I</strong>
+              <span class="meta">Jul 2019 - Dec 2021 · Bangalore, India</span>
+            </div>
+            <ul>
+              <li>Established stable pre-prod infrastructure on Kubernetes for containerized microservices.</li>
+              <li>Designed anomaly blocking in pipelines, protecting revenue for 100,000+ products.</li>
+              <li>Engineered real-time processing workflows using Apache Storm topologies.</li>
+            </ul>
+          </div>
+          <div class="exp-item">
+            <div class="head">
+              <strong>Nucleus Software — Project Intern</strong>
+              <span class="meta">May 2018 - Jul 2018 · Noida, India</span>
+            </div>
+            <ul><li>Developed a multilingual Voice Bot using RASA with context memory.</li></ul>
+          </div>
+        </article>
+
+        <div class="two-col" style="grid-column: span 12;">
+          <article class="card">
+            <h2>Education</h2>
+            <div class="head">
+              <strong>National Institute of Technology, Kurukshetra</strong>
+              <span class="meta">2015 - 2019</span>
+            </div>
+            <p>Bachelor of Technology in Computer Science · CGPA: 9.2</p>
+          </article>
+
+          <article class="card">
+            <h2>Skills</h2>
+            <div>
+              <span class="pill">Java</span><span class="pill">Python</span><span class="pill">C++</span><span class="pill">Go</span><span class="pill">SQL</span>
+              <span class="pill">Kafka</span><span class="pill">Kubernetes</span><span class="pill">Docker</span><span class="pill">Cassandra</span><span class="pill">Flink</span>
+              <span class="pill">Microservices</span><span class="pill">Distributed Systems</span><span class="pill">System Design</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
