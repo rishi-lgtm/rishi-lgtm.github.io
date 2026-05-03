@@ -1,9 +1,19 @@
 ---
-#
-# By default, content added below the "---" mark will appear in the home page
-# between the top bar and the list of recent posts.
-# To change the home page layout, edit the _layouts/home.html file.
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-#
-layout: default
+layout: null
+permalink: /
 ---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=/index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting…</title>
+    <script>
+      window.location.replace('/index.html');
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to the updated resume page… <a href="/index.html">Continue</a></p>
+  </body>
+</html>
