@@ -6,40 +6,86 @@
     <title>Rishi Gupta | Resume</title>
     <style>
       :root {
-        --bg: #f5f4f2;
+        --bg: #eceff3;
         --card: #ffffff;
-        --text: #1f1f1f;
-        --muted: #5f5f5f;
-        --accent: #8a3f3f;
-        --line: #e6e2dc;
+        --text: #1a1f2b;
+        --muted: #5a6475;
+        --accent: #5d5fef;
+        --accent-2: #9146ff;
+        --line: #dde3ee;
+        --success: #0d9f6e;
       }
 
       * { box-sizing: border-box; }
       body {
         margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: var(--bg);
+        font-family: Inter, Arial, Helvetica, sans-serif;
+        background: radial-gradient(circle at top right, #f8f9ff 0%, var(--bg) 40%, #e4eaf6 100%);
         color: var(--text);
-        line-height: 1.45;
+        line-height: 1.5;
       }
 
       .page {
-        max-width: 920px;
+        max-width: 1040px;
         margin: 28px auto;
-        background: var(--card);
+        background: color-mix(in srgb, var(--card) 92%, #f6f7ff 8%);
         border: 1px solid var(--line);
-        padding: 32px;
+        border-radius: 18px;
+        box-shadow: 0 20px 60px rgba(14, 25, 48, 0.12);
+        padding: 30px;
       }
 
-      .header { border-bottom: 2px solid var(--line); padding-bottom: 16px; margin-bottom: 24px; }
-      h1 { margin: 0; font-size: 2.1rem; letter-spacing: 0.4px; }
-      .role { margin-top: 6px; font-size: 1rem; color: var(--accent); font-weight: bold; text-transform: uppercase; }
+      .header {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 20px;
+        border-bottom: 2px solid var(--line);
+        padding-bottom: 18px;
+        margin-bottom: 18px;
+      }
+      h1 { margin: 0; font-size: 2.2rem; letter-spacing: 0.4px; }
+      .role { margin-top: 6px; font-size: 1rem; color: var(--accent); font-weight: 700; text-transform: uppercase; }
       .contact { margin-top: 10px; color: var(--muted); font-size: 0.94rem; }
-      .contact a { color: inherit; text-decoration: none; }
+      .contact a { color: inherit; text-decoration: none; border-bottom: 1px dotted #bcc6da; }
+
+      .quick-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        gap: 10px;
+      }
+      .stat {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 10px;
+        background: #f7f9ff;
+      }
+      .stat strong { display: block; font-size: 1.1rem; color: var(--accent-2); }
+      .stat span { color: var(--muted); font-size: 0.86rem; }
+
+      .tabs {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin: 6px 0 14px;
+      }
+      .tab {
+        border: 1px solid var(--line);
+        background: #f8faff;
+        color: var(--muted);
+        border-radius: 999px;
+        padding: 8px 14px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      .tab.active { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: #fff; border-color: transparent; }
+
+      .panel { display: none; animation: fade .25s ease; }
+      .panel.active { display: block; }
+      @keyframes fade { from { opacity: 0; transform: translateY(8px);} to { opacity: 1; transform: translateY(0);} }
 
       h2 {
-        font-size: 1.05rem;
-        margin: 22px 0 10px;
+        font-size: 1rem;
+        margin: 20px 0 10px;
         color: var(--accent);
         border-bottom: 1px solid var(--line);
         padding-bottom: 6px;
@@ -47,105 +93,146 @@
         letter-spacing: 0.7px;
       }
 
-      .item { margin-bottom: 14px; }
-      .item-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-      .item-head strong { font-size: 1rem; }
-      .meta { color: var(--muted); font-size: 0.92rem; }
+      .item {
+        margin-bottom: 12px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        overflow: hidden;
+        background: #fff;
+      }
+      .item > summary {
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 12px;
+        align-items: baseline;
+      }
+      .item > summary::-webkit-details-marker { display: none; }
+      .item[open] > summary { background: #f8faff; }
+      .meta { color: var(--muted); font-size: 0.9rem; }
+      .item-body { padding: 0 12px 12px; }
       ul { margin: 8px 0 0 18px; padding: 0; }
       li { margin-bottom: 6px; }
       p { margin: 8px 0 0; }
+      .tag { display: inline-block; margin: 0 6px 6px 0; padding: 6px 10px; border-radius: 999px; background: #f0f4ff; border: 1px solid #dbe4ff; }
+      .impact { color: var(--success); font-weight: 600; }
 
-      @media (max-width: 700px) {
-        .page { margin: 0; padding: 20px; border: 0; }
+      @media (max-width: 800px) {
+        .header { grid-template-columns: 1fr; }
+        .page { margin: 0; padding: 18px; border: 0; border-radius: 0; }
       }
     </style>
   </head>
   <body>
     <main class="page">
       <header class="header">
-        <h1>Rishi Gupta</h1>
-        <div class="role">Senior Software Engineer</div>
-        <div class="contact">
-          guptarish123455@gmail.com · +91-8433496312 ·
-          <a href="https://github.com/rishi-lgtm">github.com/rishi-lgtm</a> ·
-          <a href="https://www.linkedin.com/in/rishi-gupta-554295113">linkedin.com/in/rishi-gupta-554295113</a>
+        <div>
+          <h1>Rishi Gupta</h1>
+          <div class="role">Senior Software Engineer</div>
+          <div class="contact">
+            guptarish123455@gmail.com · +91-8433496312 ·
+            <a href="https://github.com/rishi-lgtm">github.com/rishi-lgtm</a> ·
+            <a href="https://www.linkedin.com/in/rishi-gupta-554295113">linkedin.com/in/rishi-gupta-554295113</a>
+          </div>
+        </div>
+        <div class="quick-stats">
+          <div class="stat"><strong>6+ yrs</strong><span>Industry Experience</span></div>
+          <div class="stat"><strong>1.5x</strong><span>Trip Volume Growth</span></div>
+          <div class="stat"><strong>28%</strong><span>Failure Reduction</span></div>
+          <div class="stat"><strong>150ms</strong><span>P99 Latency Improvement</span></div>
         </div>
       </header>
 
-      <section>
+      <nav class="tabs" aria-label="Resume sections">
+        <button class="tab active" data-target="overview">Overview</button>
+        <button class="tab" data-target="experience">Experience</button>
+        <button class="tab" data-target="skills">Skills</button>
+      </nav>
+
+      <section id="overview" class="panel active">
         <h2>Summary</h2>
         <p>
           Senior Software Engineer at Uber with experience building high-scale marketplace and financial systems.
           Skilled in distributed systems, microservices, and event-driven architecture.
         </p>
-      </section>
 
-      <section>
-        <h2>Experience</h2>
-
-        <div class="item">
-          <div class="item-head">
-            <strong>Uber — Senior Software Engineer (L5)</strong>
-            <span class="meta">Mar 2024 - Present · Bangalore, India</span>
-          </div>
-          <ul>
-            <li>Boosted completed trip volume by 1.5x and reduced cancellation rates by 10% through Blast Dispatch.</li>
-            <li>Reduced order finalization failures by 28% by leading settlement migration to uCommerce.</li>
-            <li>Launched near real-time geospatial marketplace metrics for consumer applications.</li>
-            <li>Mentored interns to build a debug tool that reduced investigation time from ~20 minutes to ~2 seconds.</li>
-          </ul>
-        </div>
-
-        <div class="item">
-          <div class="item-head">
-            <strong>Uber — Software Engineer II (L4)</strong>
-            <span class="meta">Dec 2021 - Mar 2024 · Bangalore, India</span>
-          </div>
-          <ul>
-            <li>Increased completed trips by 10% via scalable partner integrations and real-time trip editing.</li>
-            <li>Improved incident detection by 40% with monitoring dashboards and alerting.</li>
-            <li>Reduced P99 latency by 150ms by optimizing high-throughput downstream calls.</li>
-          </ul>
-        </div>
-
-        <div class="item">
-          <div class="item-head">
-            <strong>Flipkart — SDE-I</strong>
-            <span class="meta">Jul 2019 - Dec 2021 · Bangalore, India</span>
-          </div>
-          <ul>
-            <li>Built stable pre-prod infrastructure on Kubernetes for containerized microservices.</li>
-            <li>Designed anomaly-blocking mechanism protecting revenue for 100,000+ products.</li>
-            <li>Engineered real-time file processing using Apache Storm topologies.</li>
-          </ul>
-        </div>
-
-        <div class="item">
-          <div class="item-head">
-            <strong>Nucleus Software — Project Intern</strong>
-            <span class="meta">May 2018 - Jul 2018 · Noida, India</span>
-          </div>
-          <ul>
-            <li>Developed a multilingual Voice Bot using RASA with context memory.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section>
         <h2>Education</h2>
-        <div class="item-head">
-          <strong>National Institute of Technology, Kurukshetra</strong>
-          <span class="meta">2015 - 2019</span>
-        </div>
+        <p><strong>National Institute of Technology, Kurukshetra</strong> · 2015 - 2019</p>
         <p>Bachelor of Technology in Computer Science · CGPA: 9.2</p>
       </section>
 
-      <section>
-        <h2>Skills</h2>
-        <p><strong>Languages:</strong> Java, Python, C++, Go, SQL</p>
-        <p><strong>Platforms & Tools:</strong> MySQL, Cassandra, ElasticSearch, Kafka, Apache Flink, Kubernetes, Docker, Grafana</p>
-        <p><strong>Core Concepts:</strong> System Design (HLD/LLD), Microservices, Distributed Systems, Event-Driven Architecture</p>
+      <section id="experience" class="panel">
+        <h2>Experience (expand each role)</h2>
+
+        <details class="item" open>
+          <summary>
+            <strong>Uber — Senior Software Engineer (L5)</strong>
+            <span class="meta">Mar 2024 - Present · Bangalore, India</span>
+          </summary>
+          <div class="item-body">
+            <ul>
+              <li><span class="impact">+1.5x</span> completed trip volume and <span class="impact">-10%</span> cancellation via Blast Dispatch.</li>
+              <li>Reduced order finalization failures by <span class="impact">28%</span> by leading settlement migration to uCommerce.</li>
+              <li>Launched near real-time geospatial marketplace metrics for consumer applications.</li>
+              <li>Mentored interns to build a debug tool reducing investigation time from ~20 minutes to ~2 seconds.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="item">
+          <summary>
+            <strong>Uber — Software Engineer II (L4)</strong>
+            <span class="meta">Dec 2021 - Mar 2024 · Bangalore, India</span>
+          </summary>
+          <div class="item-body">
+            <ul>
+              <li>Increased completed trips by 10% via scalable partner integrations and real-time trip editing.</li>
+              <li>Improved incident detection by 40% with monitoring dashboards and alerting.</li>
+              <li>Reduced P99 latency by 150ms by optimizing high-throughput downstream calls.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="item">
+          <summary>
+            <strong>Flipkart — SDE-I</strong>
+            <span class="meta">Jul 2019 - Dec 2021 · Bangalore, India</span>
+          </summary>
+          <div class="item-body">
+            <ul>
+              <li>Built stable pre-prod infrastructure on Kubernetes for containerized microservices.</li>
+              <li>Designed anomaly-blocking mechanism protecting revenue for 100,000+ products.</li>
+              <li>Engineered real-time file processing using Apache Storm topologies.</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section id="skills" class="panel">
+        <h2>Core Skills</h2>
+        <p>
+          <span class="tag">Java</span><span class="tag">Python</span><span class="tag">C++</span><span class="tag">Go</span><span class="tag">SQL</span>
+          <span class="tag">MySQL</span><span class="tag">Cassandra</span><span class="tag">ElasticSearch</span><span class="tag">Kafka</span>
+          <span class="tag">Apache Flink</span><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Grafana</span>
+          <span class="tag">System Design</span><span class="tag">Microservices</span><span class="tag">Distributed Systems</span><span class="tag">Event-Driven Architecture</span>
+        </p>
       </section>
     </main>
+
+    <script>
+      const tabs = document.querySelectorAll('.tab');
+      const panels = document.querySelectorAll('.panel');
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          tabs.forEach((btn) => btn.classList.remove('active'));
+          panels.forEach((panel) => panel.classList.remove('active'));
+          tab.classList.add('active');
+          document.getElementById(tab.dataset.target).classList.add('active');
+        });
+      });
+    </script>
   </body>
 </html>
