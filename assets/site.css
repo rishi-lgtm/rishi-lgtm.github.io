@@ -11,7 +11,7 @@ html{scroll-padding-top:105px;color-scheme:light dark}body{margin:0;background:l
 #rishi-resume .wrap{width:min(1040px,calc(100% - 80px));margin-inline:auto}
 #rishi-resume .rg-top{margin-bottom:0;padding:24px 0;gap:20px}
 #rishi-resume .rg-wordmark{font-size:24px}#rishi-resume .rg-domain{font-size:11px}
-#rishi-resume .pdf-link{font-size:13px;min-height:44px;display:flex;align-items:center;gap:8px}
+#rishi-resume .pdf-link{font-size:13px;min-height:44px;display:flex;align-items:center;gap:8px;margin-left:auto}
 #rishi-resume .nav-wrap{position:sticky;top:12px;z-index:5;display:flex;justify-content:center;padding:5px 16px;pointer-events:none}
 #rishi-resume .rg-nav{pointer-events:auto}
 #rishi-resume .rg-nav a{padding:10px 20px;border-radius:30px;font-size:13px;color:var(--rg-muted);min-height:44px}
