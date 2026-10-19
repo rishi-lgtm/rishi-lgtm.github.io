@@ -1,63 +1,122 @@
-
-#rishi-resume .rg-site{--rg-ink:light-dark(#172130,#eff3fc);--rg-muted:light-dark(#536071,#afbbcd);--rg-surface:light-dark(#f9fbfe,#171d2b);--rg-line:light-dark(#dce3ed,#354155);--rg-accent:light-dark(#345cac,#a7c3ff);--rg-radius:26px;color:var(--rg-ink);background:var(--rg-surface);font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:790px;padding:28px 40px 30px;box-sizing:border-box;position:relative;isolation:isolate;overflow-wrap:anywhere}
-#rishi-resume .rg-site *{box-sizing:border-box}#rishi-resume .rg-site [hidden]{display:none!important}#rishi-resume .rg-site button,#rishi-resume .rg-site a{-webkit-tap-highlight-color:transparent}#rishi-resume .rg-site button{font:inherit;cursor:pointer}#rishi-resume .rg-site a{color:inherit;text-decoration:none}#rishi-resume .rg-site a:hover{text-decoration:underline;text-underline-offset:4px}#rishi-resume .rg-site button:hover{filter:brightness(.94)}#rishi-resume .rg-site p{margin:0 0 18px}#rishi-resume .rg-site h1,#rishi-resume .rg-site h2,#rishi-resume .rg-site h3{color:inherit;font-family:inherit;margin:0;letter-spacing:-.04em}#rishi-resume .rg-site small{font-size:12px;color:var(--rg-muted)}#rishi-resume .rg-site svg{width:16px;height:16px;flex-shrink:0}#rishi-resume .rg-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-right:65px;margin-bottom:27px}#rishi-resume .rg-wordmark{font-size:20px;font-weight:650;letter-spacing:-.8px}#rishi-resume .rg-dot{color:var(--rg-accent)}#rishi-resume .rg-domain{font-size:10px;letter-spacing:1.3px;color:var(--rg-muted)}
-#rishi-resume .rg-glass{background:linear-gradient(130deg,light-dark(#ffffffd9,#39455dbb),light-dark(#f1f5ffbb,#202b3fbb));border:1px solid light-dark(#ffffff,#5a667c);box-shadow:inset 0 1px 1px light-dark(#fff,#72819966),0 6px 24px light-dark(#28396412,#0004);backdrop-filter:blur(22px)}#rishi-resume .rg-nav{display:flex;width:max-content;max-width:100%;margin:0 auto;padding:5px;border-radius:40px;gap:3px}#rishi-resume .rg-nav button{border:0;border-radius:30px;padding:8px 17px;background:transparent;color:var(--rg-muted);font-size:12px;white-space:nowrap}#rishi-resume .rg-nav button[aria-pressed="true"]{background:light-dark(#fff,#526079);color:var(--rg-ink);box-shadow:0 2px 8px #00000010}#rishi-resume .rg-eyebrow{font-size:10px;letter-spacing:2px;font-weight:650;color:var(--rg-muted)}#rishi-resume .rg-actions{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:22px}#rishi-resume .rg-primary{display:inline-flex;align-items:center;gap:14px;background:light-dark(#172130,#e8efff);color:light-dark(#fff,#18253d);padding:12px 20px;border:0;border-radius:28px;font-size:13px!important;font-weight:550!important;box-shadow:0 4px 12px #10254412}#rishi-resume .rg-link,#rishi-resume .rg-email,#rishi-resume .rg-text-button{display:inline-flex;align-items:center;gap:8px;font-size:13px}#rishi-resume .rg-text-button{border:0;padding:0;background:transparent;color:var(--rg-accent);text-align:left}#rishi-resume .rg-social{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}#rishi-resume .rg-social a{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--rg-muted);min-height:32px}#rishi-resume .horizon{background:radial-gradient(ellipse at 16% 24%,light-dark(#d7e6fe,#253952) 0%,transparent 40%),radial-gradient(ellipse at 87% 38%,light-dark(#e8ddf9,#322a48) 0%,transparent 42%),var(--rg-surface)}#rishi-resume .rg-hero{text-align:center;padding:48px 0 38px}#rishi-resume .rg-hero h1{font-size:clamp(44px,6.4vw,70px);font-weight:600;line-height:1.05;letter-spacing:-4px;margin:19px 0 25px}#rishi-resume .rg-hero h1 span,#rishi-resume .rg-bio h1 span,#rishi-resume .rg-editorial-title span{color:var(--rg-accent)}#rishi-resume .rg-intro{font-size:15px;color:var(--rg-muted);line-height:1.7;margin-bottom:25px!important}#rishi-resume .rg-hero .rg-social{margin-top:26px}#rishi-resume .rg-impact{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rg-line);padding-top:28px;margin-top:5px;gap:22px}#rishi-resume .rg-impact>div{display:flex;flex-direction:column;align-items:center;text-align:center}#rishi-resume .rg-number{font-size:38px;font-weight:550;letter-spacing:-2px;line-height:1.3}#rishi-resume .rg-impact span:not(.rg-number){font-size:12px;margin:5px 0}#rishi-resume .rg-foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--rg-muted);margin-top:40px}#rishi-resume .rg-separator{padding:0 10px}
-#rishi-resume .rg-detail{padding:35px 0 20px;max-width:740px;margin:auto}#rishi-resume .journal .rg-detail{padding:0}#rishi-resume .rg-detail h2{font-size:32px;line-height:1.2;font-weight:550;margin-bottom:12px}#rishi-resume .rg-detail h3{font-size:18px;font-weight:550;margin-bottom:6px}#rishi-resume .rg-detail p,#rishi-resume .rg-detail li{font-size:13px;color:var(--rg-muted)}#rishi-resume .rg-detail ul{padding-left:20px;margin:14px 0}#rishi-resume .rg-detail li{margin:8px 0}#rishi-resume .rg-job{border-top:1px solid var(--rg-line);padding:22px 0 6px}#rishi-resume .rg-job>small{display:block}#rishi-resume .rg-job summary{cursor:pointer;font-size:13px;color:var(--rg-accent);padding:10px 0}#rishi-resume .rg-skill-list{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0 30px}#rishi-resume .rg-skill-list span{padding:6px 11px;border:1px solid var(--rg-line);border-radius:10px;font-size:12px;background:light-dark(#fff,#202838)}#rishi-resume .rg-contact-links{display:grid;gap:16px;margin:30px 0}#rishi-resume .rg-contact-links a{display:flex;gap:10px;align-items:center;font-size:14px}#rishi-resume .rg-contact-links a span{overflow-wrap:anywhere}
-@media(max-width:700px){#rishi-resume .rg-site{padding:24px;min-height:1060px}#rishi-resume .rg-top{padding-right:55px}#rishi-resume .rg-domain{display:none}#rishi-resume .rg-nav button{padding:9px 11px}#rishi-resume .rg-hero{padding:52px 0 38px}#rishi-resume .rg-hero h1{font-size:51px;letter-spacing:-2.8px}#rishi-resume .rg-desktop{display:none}#rishi-resume .rg-impact{grid-template-columns:1fr;gap:22px}#rishi-resume .rg-impact>div{align-items:flex-start;text-align:left}#rishi-resume .rg-number{font-size:32px}#rishi-resume .rg-foot{margin-top:32px}#rishi-resume .rg-bento-grid{grid-template-columns:1fr}#rishi-resume .rg-tile{padding:24px}#rishi-resume .rg-bio h1{font-size:37px}#rishi-resume .rg-big{font-size:55px;margin:0 0 12px}#rishi-resume .rg-highlight .rg-text-button{margin-top:6px}#rishi-resume .rg-journal-layout{grid-template-columns:1fr;gap:32px;margin-top:15px}#rishi-resume .rg-avatar{float:right;margin:0 0 12px 15px}#rishi-resume .rg-profile-summary{display:none}#rishi-resume .rg-profile .rg-nav{flex-direction:row;flex-wrap:wrap;justify-content:center;margin-top:20px;padding:5px}#rishi-resume .rg-profile .rg-nav button{font-size:11px;padding:8px 10px}#rishi-resume .rg-editorial-title{font-size:32px}#rishi-resume .rg-story-head{align-items:flex-start}#rishi-resume .rg-social a{min-height:40px}}
-@media(max-width:380px){#rishi-resume .rg-site{padding:18px}#rishi-resume .rg-hero h1{font-size:43px}#rishi-resume .rg-nav button{padding:9px;font-size:11px}#rishi-resume .rg-intro{font-size:14px}#rishi-resume .rg-actions{gap:15px}#rishi-resume .rg-story-head{flex-direction:column;gap:5px}#rishi-resume .rg-career-line{flex-direction:column;gap:1px}}
-
-html{scroll-padding-top:105px;color-scheme:light dark}body{margin:0;background:light-dark(#f9fbfe,#171d2b)}
-#rishi-resume .rg-site{padding:0;min-height:0;background:radial-gradient(ellipse 650px 500px at 15% 260px,light-dark(#d7e6fe,#253952),transparent),radial-gradient(ellipse 620px 500px at 88% 400px,light-dark(#e8ddf9,#322a48),transparent),var(--rg-surface)}
-#rishi-resume .wrap{width:min(1040px,calc(100% - 80px));margin-inline:auto}
-#rishi-resume .rg-top{margin-bottom:0;padding:24px 0;gap:20px}
-#rishi-resume .rg-wordmark{font-size:24px}#rishi-resume .rg-domain{font-size:11px}
-#rishi-resume .pdf-link{font-size:13px;min-height:44px;display:flex;align-items:center;gap:8px;margin-left:auto}
-#rishi-resume .nav-wrap{position:sticky;top:12px;z-index:5;display:flex;justify-content:center;padding:5px 16px;pointer-events:none}
-#rishi-resume .rg-nav{pointer-events:auto}
-#rishi-resume .rg-nav a{padding:10px 20px;border-radius:30px;font-size:13px;color:var(--rg-muted);min-height:44px}
-#rishi-resume .rg-nav a[aria-current]{background:light-dark(#fff,#526079);color:var(--rg-ink);box-shadow:0 2px 8px #00000010}
-#rishi-resume .rg-nav a:hover{text-decoration:none;color:var(--rg-ink)}
-#rishi-resume .rg-hero{padding:65px 0 45px}#rishi-resume .rg-hero h1{font-size:clamp(44px,7vw,80px);margin:24px 0 29px}
-#rishi-resume .rg-eyebrow{font-size:11px;letter-spacing:2px}#rishi-resume .rg-intro{font-size:17px;line-height:1.8}
-#rishi-resume .rg-primary,#rishi-resume .rg-secondary{min-height:48px;padding:12px 22px;font-size:14px!important;border-radius:30px;display:inline-flex;align-items:center;justify-content:center;gap:15px}
-#rishi-resume .rg-site a.rg-primary{color:light-dark(#fff,#18253d)}
-#rishi-resume .rg-primary:hover,#rishi-resume .rg-secondary:hover{text-decoration:none;transform:translateY(-2px)}
-#rishi-resume .rg-secondary{background:linear-gradient(130deg,light-dark(#ffffffd9,#39455dbb),light-dark(#f1f5ffbb,#202b3fbb));border:1px solid light-dark(#fff,#5a667c);box-shadow:0 4px 14px #1723400c}
-#rishi-resume .rg-social a{font-size:13px;min-height:44px}#rishi-resume .rg-social{gap:8px 25px}
-#rishi-resume .rg-impact{padding-top:30px}#rishi-resume .rg-number{font-size:43px}#rishi-resume .rg-impact span:not(.rg-number){font-size:13px}
-#rishi-resume .rg-foot{margin-top:40px;font-size:12px}
-#rishi-resume .content-section{padding-top:110px}
-#rishi-resume .section-title{font-size:clamp(36px,4.7vw,52px);line-height:1.1;font-weight:550;letter-spacing:-2px;margin:15px 0 22px}
-#rishi-resume .section-title span{color:var(--rg-accent)}#rishi-resume .section-intro{color:var(--rg-muted);max-width:560px;margin-bottom:42px}
-#rishi-resume .career-entry{display:grid;grid-template-columns:215px minmax(0,1fr);gap:45px;border-top:1px solid var(--rg-line);padding:36px 0 40px}
-#rishi-resume .career-meta{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
-#rishi-resume .career-meta strong{font-size:21px;font-weight:550;letter-spacing:-.5px;margin-bottom:5px}
-#rishi-resume .career-meta span{font-size:13px;color:var(--rg-muted)}
-#rishi-resume .career-content h3{font-size:22px;line-height:1.4;letter-spacing:-.5px;font-weight:550;margin-bottom:22px}
-#rishi-resume .career-content ul{list-style:none;padding:0;margin:0;display:grid;gap:21px}
-#rishi-resume .career-content li{font-size:15px;color:var(--rg-muted);line-height:1.8}
-#rishi-resume .career-content li strong{font-weight:550;color:var(--rg-ink)}
-#rishi-resume .skills-grid{display:grid;grid-template-columns:1fr 1.4fr 1.2fr;gap:30px;margin-top:36px}
-#rishi-resume .skills-grid h3{font-size:17px;font-weight:550;letter-spacing:-.3px}
-#rishi-resume .rg-skill-list span{font-size:13px;padding:7px 12px}
-#rishi-resume .education{display:flex;align-items:center;justify-content:space-between;gap:25px;border-block:1px solid var(--rg-line);padding-block:32px;margin-top:30px}
-#rishi-resume .education h3{font-size:20px;font-weight:550;margin:10px 0 7px;letter-spacing:-.5px}
-#rishi-resume .education p{color:var(--rg-muted);font-size:14px;margin:0}
-#rishi-resume .education-meta{display:flex;flex-direction:column;gap:5px;white-space:nowrap;color:var(--rg-muted);font-size:13px}
-#rishi-resume .education-meta strong{font-size:30px;color:var(--rg-ink);font-weight:550}
-#rishi-resume .contact-section{text-align:center;padding-bottom:70px}
-#rishi-resume .contact-email{display:inline-block;max-width:100%;overflow-wrap:anywhere;font-size:clamp(16px,2.5vw,26px);letter-spacing:-.5px;margin:12px 0 20px}
-#rishi-resume .contact-details{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 26px;color:var(--rg-muted);font-size:13px}
-#rishi-resume .contact-details a{min-height:32px}#rishi-resume .contact-section .rg-social{margin-top:15px}
-#rishi-resume .resume-download{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:18px;margin-top:32px;font-size:13px;color:var(--rg-muted)}
-#rishi-resume .resume-download a{color:var(--rg-ink)}
-#rishi-resume .page-footer{border-top:1px solid var(--rg-line);display:flex;justify-content:space-between;gap:20px;padding:25px 0 35px;font-size:12px;color:var(--rg-muted)}
-#rishi-resume .page-footer a{min-height:32px}
-#rishi-resume .skip-link{position:absolute;top:10px;left:20px;padding:10px 18px;background:var(--rg-ink);color:var(--rg-surface);border-radius:30px;transform:translateY(-160%);z-index:10}
-#rishi-resume .skip-link:focus{transform:translateY(0)}
-#rishi-resume a:focus-visible{outline:3px solid var(--rg-accent);outline-offset:5px}
-@media(max-width:760px){#rishi-resume .wrap{width:calc(100% - 40px)}#rishi-resume .rg-domain{display:none}#rishi-resume .rg-top{padding-block:18px}#rishi-resume .nav-wrap{top:8px}#rishi-resume .rg-nav a{padding:10px 15px}#rishi-resume .rg-hero{padding:45px 0 35px}#rishi-resume .rg-intro{font-size:15px}#rishi-resume .rg-eyebrow{font-size:10px;letter-spacing:1.6px}#rishi-resume .content-section{padding-top:80px}#rishi-resume .career-entry{grid-template-columns:1fr;gap:22px;padding-block:28px}#rishi-resume .career-meta{display:grid;grid-template-columns:1fr auto;gap:0 15px}#rishi-resume .career-meta strong{grid-row:span 2}#rishi-resume .career-meta span{text-align:right;font-size:12px}#rishi-resume .career-content h3{font-size:20px}#rishi-resume .career-content li{font-size:14px}#rishi-resume .skills-grid{grid-template-columns:1fr;gap:5px}#rishi-resume .education{align-items:flex-start}#rishi-resume .rg-primary,#rishi-resume .rg-secondary{font-size:13px!important}#rishi-resume .contact-section{padding-bottom:55px}}
-@media(max-width:420px){#rishi-resume .wrap{width:calc(100% - 32px)}#rishi-resume .rg-nav a{font-size:12px;padding:10px 9px;white-space:nowrap}#rishi-resume .rg-hero h1{font-size:43px;letter-spacing:-2.5px}#rishi-resume .rg-actions{gap:12px}#rishi-resume .rg-primary,#rishi-resume .rg-secondary{padding:12px 16px;font-size:12px!important;gap:9px}#rishi-resume .rg-social{gap:3px 18px}#rishi-resume .rg-social a{font-size:12px}#rishi-resume .rg-impact>div{display:grid;grid-template-columns:105px 1fr;column-gap:10px;align-items:center}#rishi-resume .rg-number{grid-row:span 2;font-size:36px}#rishi-resume .rg-impact span:not(.rg-number){font-size:12px;margin:0}#rishi-resume .rg-impact small{font-size:11px}#rishi-resume .rg-foot{flex-direction:column;gap:9px;font-size:11px}#rishi-resume .career-meta{grid-template-columns:1fr;gap:5px}#rishi-resume .career-meta strong{grid-row:auto}#rishi-resume .career-meta span{text-align:left}#rishi-resume .education{flex-direction:column;gap:20px}#rishi-resume .education-meta{flex-direction:row;align-items:baseline;gap:20px}#rishi-resume .resume-download>span{width:100%}#rishi-resume .page-footer{flex-direction:column;gap:5px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#rishi-resume .rg-primary:hover,#rishi-resume .rg-secondary:hover{transform:none}}
-@media(prefers-reduced-transparency:reduce){#rishi-resume .rg-glass,#rishi-resume .rg-secondary{background:var(--rg-surface);backdrop-filter:none;-webkit-backdrop-filter:none}}
-@media print{html{color-scheme:light}#rishi-resume .rg-site{background:#fff;color:#111}#rishi-resume .rg-top,#rishi-resume .nav-wrap,#rishi-resume .rg-actions,#rishi-resume .resume-download,#rishi-resume .skip-link,#rishi-resume .page-footer{display:none}#rishi-resume .wrap{width:100%}#rishi-resume .rg-hero{padding:0 0 20px}#rishi-resume .rg-hero h1{font-size:30pt}#rishi-resume .rg-intro{font-size:11pt}#rishi-resume .content-section{padding-top:25px}#rishi-resume .section-title{font-size:22pt}#rishi-resume .career-entry{grid-template-columns:150px 1fr;gap:20px;padding:20px 0}#rishi-resume .career-content li{font-size:10pt;break-inside:avoid}#rishi-resume .contact-section{padding-bottom:0}}
+:root {
+  color-scheme: light dark;
+  --ink: #172130;
+  --muted: #536071;
+  --surface: #f9fbfe;
+  --line: #d4ddea;
+  --accent: #345cac;
+  --haze-blue: #d7e6fe;
+  --haze-purple: #e8ddf9;
+  --glass: rgba(247, 250, 255, .82);
+  --glass-edge: #fff;
+  --selected: #fff;
+  --shadow: rgba(40, 57, 100, .1);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #eff3fc;
+    --muted: #b9c4d5;
+    --surface: #171d2b;
+    --line: #3c4960;
+    --accent: #b3ccff;
+    --haze-blue: #253952;
+    --haze-purple: #322a48;
+    --glass: rgba(42, 54, 76, .86);
+    --glass-edge: #647188;
+    --selected: #526079;
+    --shadow: rgba(0, 0, 0, .2);
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 98px; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: radial-gradient(ellipse 650px 540px at 12% 140px, var(--haze-blue), transparent), radial-gradient(ellipse 640px 520px at 95% 380px, var(--haze-purple), transparent), var(--surface);
+  font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, p { margin: 0; }
+a { color: var(--accent); text-underline-offset: 4px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+.page-width { width: min(900px, calc(100% - 64px)); margin-inline: auto; }
+.resume-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 48px 0 27px; }
+h1 { font-size: clamp(32px, 4vw, 44px); line-height: 1.15; font-weight: 600; letter-spacing: -1.6px; }
+.resume-header p { color: var(--muted); margin-top: 9px; font-size: 16px; }
+.download-link { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 11px 18px; min-height: 46px; border: 1px solid var(--glass-edge); border-radius: 28px; background: var(--glass); box-shadow: inset 0 1px 1px rgba(255,255,255,.2), 0 5px 20px var(--shadow); color: var(--ink); text-decoration: none; font-size: 13px; white-space: nowrap; }
+.download-link:hover { text-decoration: underline; }
+.file-type { color: var(--muted); font-size: 11px; }
+.nav-wrap { position: sticky; top: 12px; z-index: 5; padding: 5px 12px; display: flex; justify-content: center; pointer-events: none; }
+.section-nav { display: flex; padding: 5px; gap: 3px; border: 1px solid var(--glass-edge); border-radius: 38px; background: var(--glass); box-shadow: inset 0 1px 1px rgba(255,255,255,.2), 0 6px 24px var(--shadow); -webkit-backdrop-filter: blur(22px) saturate(130%); backdrop-filter: blur(22px) saturate(130%); pointer-events: auto; }
+.section-nav a { display: flex; align-items: center; justify-content: center; padding: 9px 21px; min-height: 44px; border-radius: 30px; color: var(--muted); text-decoration: none; font-size: 13px; white-space: nowrap; }
+.section-nav a:hover { color: var(--ink); }
+.section-nav a[aria-current] { background: var(--selected); color: var(--ink); box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+main { padding-bottom: 62px; }
+section { padding-top: 36px; }
+h2 { font-size: 23px; letter-spacing: -.5px; font-weight: 550; line-height: 1.3; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.entry { padding: 24px 0 0; }
+.entry + .entry { margin-top: 4px; }
+.entry-heading, .entry-subheading { display: flex; justify-content: space-between; align-items: baseline; gap: 12px 30px; }
+h3 { font-size: 18px; font-weight: 600; letter-spacing: -.3px; }
+.entry-heading > span { color: var(--muted); font-size: 14px; text-align: right; }
+.entry-subheading { margin-top: 4px; }
+.entry-subheading p:first-child { font-weight: 500; }
+.entry-subheading p:last-child { font-size: 14px; color: var(--muted); text-align: right; white-space: nowrap; }
+.entry ul { margin: 14px 0 0; padding-left: 22px; }
+.entry li { padding-left: 3px; margin-top: 9px; color: var(--muted); }
+.entry li::marker { color: var(--accent); }
+.entry li strong { color: var(--ink); font-weight: 550; }
+.grade { color: var(--muted); font-size: 15px; margin-top: 7px; }
+.detail-list { margin: 20px 0 0; }
+.detail-list > div { display: grid; grid-template-columns: 142px minmax(0, 1fr); gap: 12px; padding: 6px 0; }
+dt { font-weight: 550; }
+dd { margin: 0; color: var(--muted); overflow-wrap: anywhere; }
+.contact-list > div { align-items: baseline; padding: 0; }
+.contact-list a { display: inline-block; padding-block: 8px; min-height: 44px; }
+.skip-link { position: absolute; top: 10px; left: 16px; padding: 10px 18px; background: var(--ink); color: var(--surface); border-radius: 25px; transform: translateY(-160%); z-index: 10; }
+.skip-link:focus { transform: translateY(0); }
+@media (max-width: 640px) {
+  .page-width { width: calc(100% - 36px); }
+  .resume-header { align-items: flex-start; flex-direction: column; gap: 18px; padding: 30px 0 20px; }
+  .resume-header p { font-size: 15px; }
+  .nav-wrap { top: 8px; }
+  .section-nav a { padding-inline: 15px; }
+  section { padding-top: 30px; }
+  h2 { font-size: 22px; }
+  .entry-heading, .entry-subheading { flex-direction: column; gap: 2px; }
+  .entry-heading > span, .entry-subheading p:last-child { text-align: left; }
+  .entry-subheading { margin-top: 7px; }
+  .entry ul { padding-left: 19px; }
+  .detail-list > div { grid-template-columns: 1fr; gap: 2px; padding: 8px 0; }
+  .contact-list > div { padding: 5px 0; }
+  .contact-list a { padding-top: 3px; }
+}
+@media (max-width: 360px) {
+  .page-width { width: calc(100% - 32px); }
+  .section-nav { gap: 0; padding: 4px; }
+  .section-nav a { font-size: 12px; padding-inline: 10px; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .section-nav, .download-link { background: var(--surface); backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+@media print {
+  :root { color-scheme: light; --ink: #111; --muted: #222; --accent: #111; --line: #ccc; }
+  body { background: #fff; font-size: 10pt; line-height: 1.45; }
+  .page-width { width: 100%; }
+  .nav-wrap, .download-link, .skip-link { display: none; }
+  .resume-header { padding: 0 0 12px; }
+  h1 { font-size: 24pt; }
+  .resume-header p { font-size: 11pt; }
+  section { padding-top: 18px; }
+  h2 { font-size: 14pt; padding-bottom: 6px; break-after: avoid; }
+  h3 { font-size: 11pt; }
+  .entry { padding-top: 14px; }
+  .entry-heading, .entry-subheading { flex-direction: row; break-after: avoid; }
+  .entry-heading > span, .entry-subheading p:last-child { font-size: 10pt; }
+  .entry ul { margin-top: 8px; }
+  .entry li { margin-top: 5px; break-inside: avoid; }
+  .detail-list > div { grid-template-columns: 110px 1fr; padding: 3px 0; }
+  .contact-list a { min-height: 0; padding: 0; }
+  main { padding-bottom: 0; }
+}
