@@ -20,12 +20,41 @@ from reportlab.platypus import (
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "assets/Rishi-Gupta-Resume.pdf"
 args = argparse.ArgumentParser(description=__doc__)
-args.add_argument("--font-regular", default="/System/Library/Fonts/Supplemental/Arial.ttf")
-args.add_argument("--font-bold", default="/System/Library/Fonts/Supplemental/Arial Bold.ttf")
+args.add_argument("--font", choices=["helvetica", "charter", "arial"], default="helvetica",
+                  help="Font style: 'helvetica' (modern tech sans-serif, default), 'charter' (executive serif), or 'arial'")
+args.add_argument("--font-regular", default=None, help="Custom path to regular TTF/TTC font")
+args.add_argument("--font-bold", default=None, help="Custom path to bold TTF/TTC font")
 options = args.parse_args()
-pdfmetrics.registerFont(TTFont("ResumeSans", options.font_regular))
-pdfmetrics.registerFont(TTFont("ResumeSans-Bold", options.font_bold))
-pdfmetrics.registerFontFamily("ResumeSans", normal="ResumeSans", bold="ResumeSans-Bold")
+
+
+def setup_fonts(style, custom_reg=None, custom_bold=None):
+    if custom_reg and custom_bold:
+        pdfmetrics.registerFont(TTFont("ResumeSans", custom_reg))
+        pdfmetrics.registerFont(TTFont("ResumeSans-Bold", custom_bold))
+    elif style == "helvetica":
+        hn = Path("/System/Library/Fonts/HelveticaNeue.ttc")
+        if hn.exists():
+            pdfmetrics.registerFont(TTFont("ResumeSans", str(hn), subfontIndex=0))
+            pdfmetrics.registerFont(TTFont("ResumeSans-Bold", str(hn), subfontIndex=1))
+        else:
+            pdfmetrics.registerFont(TTFont("ResumeSans", "/System/Library/Fonts/Supplemental/Arial.ttf"))
+            pdfmetrics.registerFont(TTFont("ResumeSans-Bold", "/System/Library/Fonts/Supplemental/Arial Bold.ttf"))
+    elif style == "charter":
+        ch = Path("/System/Library/Fonts/Supplemental/Charter.ttc")
+        if ch.exists():
+            pdfmetrics.registerFont(TTFont("ResumeSans", str(ch), subfontIndex=0))
+            pdfmetrics.registerFont(TTFont("ResumeSans-Bold", str(ch), subfontIndex=3))
+        else:
+            pdfmetrics.registerFont(TTFont("ResumeSans", "/System/Library/Fonts/Supplemental/Georgia.ttf"))
+            pdfmetrics.registerFont(TTFont("ResumeSans-Bold", "/System/Library/Fonts/Supplemental/Georgia Bold.ttf"))
+    else:
+        pdfmetrics.registerFont(TTFont("ResumeSans", "/System/Library/Fonts/Supplemental/Arial.ttf"))
+        pdfmetrics.registerFont(TTFont("ResumeSans-Bold", "/System/Library/Fonts/Supplemental/Arial Bold.ttf"))
+
+    pdfmetrics.registerFontFamily("ResumeSans", normal="ResumeSans", bold="ResumeSans-Bold")
+
+
+setup_fonts(options.font, options.font_regular, options.font_bold)
 
 
 class Node:

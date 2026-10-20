@@ -8,8 +8,21 @@ python -m pip install reportlab
 python scripts/build_resume.py
 ```
 
-The script embeds Arial from the standard macOS font directory. On another
-system, supply a matching regular and bold TrueType font:
+### Font Options
+By default, the script builds with **Helvetica Neue** (`--font helvetica`), providing a sharp, modern Big Tech aesthetic with a 100% ATS score. You can also build with other presets:
+
+```sh
+# Modern Big Tech Sans-Serif (default):
+python scripts/build_resume.py --font helvetica
+
+# Executive Editorial Serif (Charter):
+python scripts/build_resume.py --font charter
+
+# Classic Standard Sans (Arial):
+python scripts/build_resume.py --font arial
+```
+
+On a non-macOS system, supply matching regular and bold TrueType fonts if desired:
 
 ```sh
 python scripts/build_resume.py --font-regular /path/to/Regular.ttf --font-bold /path/to/Bold.ttf
