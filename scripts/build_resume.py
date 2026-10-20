@@ -55,7 +55,7 @@ class Node:
                 result += "<b>" + child.markup() + "</b>"
             else:
                 result += child.markup()
-        return result.strip().replace("–", "-").replace("—", "-")
+        return result.strip().replace("–", "-").replace("—", "-").replace("×", "x")
 
 
 class Document(HTMLParser):
@@ -112,6 +112,8 @@ styles = {
     "bullet": ParagraphStyle("bullet", parent=body, leftIndent=10, bulletIndent=0,
                              spaceBefore=3.5, bulletFontName="ResumeSans",
                              bulletFontSize=8.5),
+    "skill": ParagraphStyle("skill", parent=body, leftIndent=86, firstLineIndent=-86,
+                            spaceBefore=3.5, leading=13.5),
 }
 story = []
 
@@ -152,12 +154,15 @@ story += [p(header.find(tag="h1")[0].text(), "name"), Spacer(1, 3),
 contacts = {a.attrs["aria-label"]: a.attrs["href"]
             for a in tree.find(id="contact")[0].find(tag="a")}
 email = contacts["Email"].removeprefix("mailto:")
+linkedin_url = contacts["LinkedIn"].removeprefix("https://").removeprefix("http://").removeprefix("www.").rstrip("/")
+github_url = contacts["GitHub"].removeprefix("https://").removeprefix("http://").removeprefix("www.").rstrip("/")
+
 story.append(p("Bangalore, India &nbsp; · &nbsp; "
                + link("+91 84334 96312", contacts["Call"]) + " &nbsp; · &nbsp; "
                + link(email, contacts["Email"]), "contact"))
 story.append(p(" &nbsp; · &nbsp; ".join([
-    link("LinkedIn", contacts["LinkedIn"]),
-    link("github.com/rishi-lgtm", contacts["GitHub"]),
+    link(linkedin_url, contacts["LinkedIn"]),
+    link(github_url, contacts["GitHub"]),
     link("rishi-lgtm.github.io", "https://rishi-lgtm.github.io/"),
 ]), "contact"))
 
@@ -180,24 +185,16 @@ section("Education")
 education = tree.find(id="education")[0]
 heading = education.find(cls="entry-heading")[0]
 subheading = education.find(cls="entry-subheading")[0].find(tag="p")
+grade = education.find(cls="grade")[0].markup()
 story.append(pair(heading.find(tag="h3")[0].markup(),
                   heading.find(tag="span")[0].markup(), "employer"))
-story.append(pair(subheading[0].markup(), subheading[1].markup(), "body"))
-story.append(p(education.find(cls="grade")[0].markup()))
+story.append(pair(f"{subheading[0].markup()} &nbsp;·&nbsp; {grade}",
+                  subheading[1].markup(), "body"))
 
 section("Technical Skills")
 skills = tree.find(id="skills")[0]
-rows = [[p(label.markup(), "role"), p(value.markup())]
-        for label, value in zip(skills.find(tag="dt"), skills.find(tag="dd"))]
-table = Table(rows, colWidths=[86, WIDTH - 86])
-table.setStyle(TableStyle([
-    ("LEFTPADDING", (0, 0), (-1, -1), 0),
-    ("RIGHTPADDING", (0, 0), (-1, -1), 0),
-    ("TOPPADDING", (0, 0), (-1, -1), 2),
-    ("BOTTOMPADDING", (0, 0), (-1, -1), 2),
-    ("VALIGN", (0, 0), (-1, -1), "TOP"),
-]))
-story.append(table)
+for label, value in zip(skills.find(tag="dt"), skills.find(tag="dd")):
+    story.append(p(f"<b>{label.text()}:</b> &nbsp; {value.markup()}", "body"))
 
 doc = SimpleDocTemplate(str(OUT), pagesize=A4, leftMargin=MARGIN, rightMargin=MARGIN,
                         topMargin=30, bottomMargin=30, title="Rishi Gupta | Senior Software Engineer",
