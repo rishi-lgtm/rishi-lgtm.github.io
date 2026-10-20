@@ -1,7 +1,7 @@
 :root {
   color-scheme: light dark;
   --ink: #172130;
-  --muted: #536071;
+  --muted: #3d4957;
   --surface: #f9fbfe;
   --line: #d4ddea;
   --accent: #345cac;
@@ -36,12 +36,12 @@ body {
   font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-h1, h2, h3, p { margin: 0; }
+h1, h2, h3, h4, p { margin: 0; }
 a { color: var(--accent); text-underline-offset: 4px; }
 a:hover { text-decoration-thickness: 2px; }
 a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
 .page-width { width: min(900px, calc(100% - 64px)); margin-inline: auto; }
-.resume-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 48px 0 27px; }
+.resume-header { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; padding: 48px 0 27px; }
 h1 { font-size: clamp(32px, 4vw, 44px); line-height: 1.15; font-weight: 600; letter-spacing: -1.6px; }
 .resume-header p { color: var(--muted); margin-top: 9px; font-size: 16px; }
 .download-link { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 11px 18px; min-height: 46px; border: 1px solid var(--glass-edge); border-radius: 28px; background: var(--glass); box-shadow: inset 0 1px 1px rgba(255,255,255,.2), 0 5px 20px var(--shadow); color: var(--ink); text-decoration: none; font-size: 13px; white-space: nowrap; }
@@ -76,7 +76,7 @@ dd { margin: 0; color: var(--muted); overflow-wrap: anywhere; }
 .skip-link:focus { transform: translateY(0); }
 @media (max-width: 640px) {
   .page-width { width: calc(100% - 36px); }
-  .resume-header { align-items: flex-start; flex-direction: column; gap: 18px; padding: 30px 0 20px; }
+  .resume-header { align-items: center; flex-direction: column; gap: 18px; padding: 30px 0 20px; }
   .resume-header p { font-size: 15px; }
   .nav-wrap { top: 8px; }
   .section-nav a { padding-inline: 15px; }
@@ -121,3 +121,26 @@ dd { margin: 0; color: var(--muted); overflow-wrap: anywhere; }
 .contact-icons a:hover { color: var(--accent); background: var(--selected); }
 .contact-icons svg { width: 22px; height: 22px; }
 @media print { .contact-icons a { box-shadow: none; background: none; border-color: var(--line); } }
+
+/* Roles share an employer heading; the rail makes internal progression clear. */
+.role { padding-top: 7px; }
+.role + .role { margin-top: 24px; }
+.role-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 8px 24px; }
+.role-heading h4 { font-size: 16px; font-weight: 550; line-height: 1.7; }
+.role-heading p { font-size: 14px; color: var(--muted); white-space: nowrap; }
+.career-progression { border-left: 1px solid var(--line); margin-top: 12px; margin-left: 3px; padding-left: 20px; }
+.career-progression .role { position: relative; }
+.career-progression .role::before { content: ""; position: absolute; left: -24px; top: 16px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--surface); }
+@media (max-width: 640px) {
+  .role-heading { flex-direction: column; gap: 2px; }
+  .career-progression { padding-left: 16px; }
+  .career-progression .role::before { left: -20px; }
+}
+@media print {
+  .resume-header { gap: 0; }
+  .role-heading { flex-direction: row; break-after: avoid; }
+  .role-heading h4, .role-heading p { font-size: 10pt; }
+  .career-progression { margin-left: 0; padding-left: 0; border: 0; }
+  .career-progression .role::before { display: none; }
+  .role + .role { margin-top: 12px; }
+}
