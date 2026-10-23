@@ -505,10 +505,40 @@ dd { margin: 0; color: var(--muted); overflow-wrap: anywhere; }
   .career-progression .role::before, .career-roles .role::before { left: -20px; }
 }
 
+/* Full-screen Party Celebration Canvas */
+#party-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Celebratory Bento Panel Pulse & Aurora Rim-Glow on Double-Click */
+@keyframes party-pulse {
+  0% {
+    box-shadow: var(--card-shadow), var(--card-specular), 0 0 0 0 rgba(99, 102, 241, 0.45);
+    transform: scale(1);
+  }
+  35% {
+    box-shadow: var(--card-shadow), var(--card-specular), 0 0 35px 8px rgba(236, 72, 153, 0.4);
+    transform: scale(1.008);
+  }
+  100% {
+    box-shadow: var(--card-shadow), var(--card-specular), 0 0 0 0 rgba(99, 102, 241, 0);
+    transform: scale(1);
+  }
+}
+
+.party-active {
+  animation: party-pulse 0.75s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
 @media print {
   :root { color-scheme: light; --ink: #111; --muted: #222; --accent: #111; --line: #ccc; }
   body { background: #fff; font-size: 10pt; line-height: 1.45; }
-  body::before { display: none; }
+  body::before, #party-canvas { display: none; }
   .page-width { width: 100%; }
   .nav-wrap, .resume-pill, .theme-toggle, .skip-link, .nav-indicator { display: none; }
   .resume-header { padding: 0 0 12px; gap: 0; }
