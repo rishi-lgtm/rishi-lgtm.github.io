@@ -242,24 +242,10 @@
 
       setupCanvas();
 
-      // Find target panel: closest bento section, header, or fallback to closest visible section
-      let panel = targetEl ? targetEl.closest('main section, header.resume-header, .resume-pill, .section-nav') : null;
-      if (!panel) {
-        const sections = document.querySelectorAll('main section');
-        let closest = null;
-        let minDist = Infinity;
-        sections.forEach(s => {
-          const r = s.getBoundingClientRect();
-          const dist = Math.abs(r.top + r.height / 2 - clientY);
-          if (dist < minDist) {
-            minDist = dist;
-            closest = s;
-          }
-        });
-        panel = closest;
-      }
+      // Find target panel: strictly match actual Bento cards inside <main>
+      const panel = targetEl ? targetEl.closest('main section') : null;
 
-      // Celebratory bounce & rim-glow pulse on the panel
+      // Celebratory bounce & rim-glow pulse ONLY on actual bento panels
       if (panel && panel.classList) {
         panel.classList.remove('party-active');
         void panel.offsetWidth; // trigger reflow
@@ -315,7 +301,7 @@
       }
 
       // 2. Radial explosion directly from the double-click point
-      const clickBurstCount = 28;
+      const clickBurstCount = panel ? 28 : 42;
       for (let i = 0; i < clickBurstCount; i++) {
         const angle = (Math.PI * 2 * i) / clickBurstCount + (Math.random() - 0.5) * 0.4;
         const speed = Math.random() * 8 + 3;

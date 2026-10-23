@@ -515,7 +515,7 @@ dd { margin: 0; color: var(--muted); overflow-wrap: anywhere; }
   z-index: 9999;
 }
 
-/* Celebratory Bento Panel Pulse & Aurora Rim-Glow on Double-Click */
+/* Celebratory Bento Panel Pulse & Aurora Rim-Glow on Double-Click (Strictly Bento Cards) */
 @keyframes party-pulse {
   0% {
     box-shadow: var(--card-shadow), var(--card-specular), 0 0 0 0 rgba(99, 102, 241, 0.45);
@@ -531,7 +531,7 @@ dd { margin: 0; color: var(--muted); overflow-wrap: anywhere; }
   }
 }
 
-.party-active {
+main section.party-active {
   animation: party-pulse 0.75s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
